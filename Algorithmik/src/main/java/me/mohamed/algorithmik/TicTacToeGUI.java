@@ -167,6 +167,14 @@ public class TicTacToeGUI extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+    private void setButtonText(btn){
+        if (this.player1Active) {
+            btn.setText()
+        }
+    }
+    
+    
+    
     private void NewGameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_NewGameActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_NewGameActionPerformed
