@@ -12,5 +12,7 @@ public class Algorithmik {
 
     public static void main(String[] args) {
         System.out.println("Hello World!");
+        TicTacToeGUI gui = new TicTacToeGUI();
+        gui.setVisible(true);
     }
 }
