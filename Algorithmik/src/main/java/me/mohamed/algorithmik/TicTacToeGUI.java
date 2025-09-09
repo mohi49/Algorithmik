@@ -167,11 +167,7 @@ public class TicTacToeGUI extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void setButtonText(btn){
-        if (this.player1Active) {
-            btn.setText()
-        }
-    }
+    
     
     
     
