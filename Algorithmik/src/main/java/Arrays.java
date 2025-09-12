@@ -29,6 +29,9 @@ public class Arrays extends javax.swing.JFrame {
 
         Button = new javax.swing.JButton();
         Anzeige = new javax.swing.JLabel();
+        Button2 = new javax.swing.JButton();
+        Zahl = new javax.swing.JTextField();
+        Postion = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -41,28 +44,63 @@ public class Arrays extends javax.swing.JFrame {
 
         Anzeige.setText("jLabel1");
 
+        Button2.setText("Press it");
+        Button2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Button2ActionPerformed(evt);
+            }
+        });
+
+        Zahl.setText("ZahlText");
+        Zahl.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ZahlActionPerformed(evt);
+            }
+        });
+
+        Postion.setText("Positionstext");
+        Postion.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                PostionActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
+                .addGap(20, 20, 20)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(161, 161, 161)
-                        .addComponent(Button))
+                        .addComponent(Anzeige, javax.swing.GroupLayout.PREFERRED_SIZE, 179, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(Zahl, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(Postion, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addContainerGap(22, Short.MAX_VALUE))
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(73, 73, 73)
-                        .addComponent(Anzeige, javax.swing.GroupLayout.PREFERRED_SIZE, 234, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(93, Short.MAX_VALUE))
+                        .addComponent(Button)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(Button2)
+                        .addGap(79, 79, 79))))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addGap(52, 52, 52)
-                .addComponent(Anzeige, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 75, Short.MAX_VALUE)
-                .addComponent(Button)
-                .addGap(101, 101, 101))
+                .addGap(22, 22, 22)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(Anzeige)
+                    .addComponent(Zahl, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(Postion, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(23, 23, 23)
+                        .addComponent(Button))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(18, 18, 18)
+                        .addComponent(Button2)))
+                .addContainerGap(202, Short.MAX_VALUE))
         );
 
         pack();
@@ -76,6 +114,23 @@ public class Arrays extends javax.swing.JFrame {
              
         }// TODO add your handling code here:
     }//GEN-LAST:event_ButtonActionPerformed
+
+    int[] b = new int[50];
+    private void Button2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Button2ActionPerformed
+      
+        for(int i = 0; i<50; i++){
+             b[i] = (int) (Math.random()*100+1); 
+             System.out.println(b[i]);
+        }
+    }//GEN-LAST:event_Button2ActionPerformed
+
+    private void ZahlActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ZahlActionPerformed
+         
+    }//GEN-LAST:event_ZahlActionPerformed
+
+    private void PostionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_PostionActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_PostionActionPerformed
 
     /**
      * @param args the command line arguments
@@ -93,5 +148,8 @@ public class Arrays extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel Anzeige;
     private javax.swing.JButton Button;
+    private javax.swing.JButton Button2;
+    private javax.swing.JTextField Postion;
+    private javax.swing.JTextField Zahl;
     // End of variables declaration//GEN-END:variables
 }
