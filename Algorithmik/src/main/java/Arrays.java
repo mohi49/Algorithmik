@@ -51,14 +51,12 @@ public class Arrays extends javax.swing.JFrame {
             }
         });
 
-        Zahl.setText("ZahlText");
         Zahl.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 ZahlActionPerformed(evt);
             }
         });
 
-        Postion.setText("Positionstext");
         Postion.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 PostionActionPerformed(evt);
@@ -75,10 +73,10 @@ public class Arrays extends javax.swing.JFrame {
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(Anzeige, javax.swing.GroupLayout.PREFERRED_SIZE, 179, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(Zahl, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(Zahl, javax.swing.GroupLayout.PREFERRED_SIZE, 119, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(18, 18, 18)
-                        .addComponent(Postion, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addContainerGap(22, Short.MAX_VALUE))
+                        .addComponent(Postion, javax.swing.GroupLayout.PREFERRED_SIZE, 108, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(Button)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -107,12 +105,12 @@ public class Arrays extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void ButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ButtonActionPerformed
-        int[] a = new int[6];
-        for(int i = 0; i<6; i++){
-             a[i] = (int) (Math.random()*49+1); 
-             this.Anzeige.setText("" +a[0] + " , " + a[1]+ " , " + a[2]+ " , " + a[3]+ " , " + a[4]+ " , " + a[5]);
+       // int[] a = new int[6];
+       // for(int i = 0; i<6; i++){
+        //     a[i] = (int) (Math.random()*49+1); 
+         //    this.Anzeige.setText("" +a[0] + " , " + a[1]+ " , " + a[2]+ " , " + a[3]+ " , " + a[4]+ " , " + a[5]);
              
-        }// TODO add your handling code here:
+     //   }// TODO add your handling code here:
     }//GEN-LAST:event_ButtonActionPerformed
 
     int[] b = new int[50];
@@ -122,6 +120,14 @@ public class Arrays extends javax.swing.JFrame {
              b[i] = (int) (Math.random()*100+1); 
              System.out.println(b[i]);
         }
+        int positionText = Integer.parseInt(this.Postion.getText());
+        this.Postion.setText("" + positionText);
+        
+        int zahlText = Integer.parseInt(this.Zahl.getText());
+        this.Zahl.setText("" + zahlText);
+        
+        
+        
     }//GEN-LAST:event_Button2ActionPerformed
 
     private void ZahlActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ZahlActionPerformed
