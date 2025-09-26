@@ -42,27 +42,44 @@ public class rekursion extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+    public static int fakultät(int n){
+        if (n == 1 || n == 0){
+            return 1;
+        }
+        return n * fakultät(n-1);
+        }
+    
+    
 
+    
+    
+    
+    public static int fibonacci(int n){ // Methode erstellt
+        if (n == 0){                    // wenn Stelle 0 angegeben wird wird 0 returnt
+            return 0;                   
+        }                               
+        else if (n == 1){               // wenn Stelle 1 angegeben wird wird 1 returnt
+            return 1;
+        }
+    return (fibonacci(n-1) + fibonacci(n-2));       // Rekursion. 
+    
+    }
+    
+    public static int ggT(int a, int b){
+        if (b==0){
+            return a;
+        }
+        return ggT(b, a % b);
+    }
+    
     /**
      * @param args the command line arguments
      */
     public static void main(String args[]) {
         /* Set the Nimbus look and feel */
-        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
-        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
-         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
-         */
-        try {
-            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-                if ("Nimbus".equals(info.getName())) {
-                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
-                    break;
-                }
-            }
-        } catch (ReflectiveOperationException | javax.swing.UnsupportedLookAndFeelException ex) {
-            logger.log(java.util.logging.Level.SEVERE, null, ex);
-        }
-        //</editor-fold>
+        System.out.println(fakultät(5));
+        System.out.println(fibonacci(6));
+        System.out.println(ggT(20, 36));
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(() -> new rekursion().setVisible(true));
